@@ -2,43 +2,42 @@
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
-      var map, infoWindow;
+      var map, infoWindow, pos;
+      
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 14
+          center: {lat: 38.0423268, lng: -84.49276569999999},
+          zoom: 14,
+          styles: mapStyles['army']
         });
         infoWindow = new google.maps.InfoWindow;
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+        getCurrentLocation();
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-            console.log(pos);
+      }
 
-            // Add Monster Markers
-            var marker = new google.maps.Marker({
-              position: pos,
-              map: map,
-              title: 'Hello World!'
+      function getCurrentLocation(){
+          // Try HTML5 geolocation.
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+
+              infoWindow.setPosition(pos);
+              infoWindow.setContent('Adventurer, you are here');
+              infoWindow.open(map);
+              map.setCenter(pos);
+              console.log(pos);
+
+            }, function() {
+              handleLocationError(true, infoWindow, map.getCenter());
             });
-
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+          }
       }
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {

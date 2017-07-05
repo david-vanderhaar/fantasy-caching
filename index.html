@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./app/css/styles.css">
+</head>
+
+<body>
+    <div id="map"></div>
+    <button onclick="generateMonsterMarkers()">Generate Monsters</button>
+</body>
+<!-- Enable Marker Clustering -->
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<!-- Enable Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhWgHy0QFctBl4j-SJlMDMEOy0wr--HE4&callback=initMap"
+    async defer>
+</script>
+<script src="./app/js/monsters.js"></script>
+<script src="./app/js/map-styles.js"></script>
+<script src="./app/js/map.js"></script>
+
+</html>
