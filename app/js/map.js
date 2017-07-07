@@ -3,6 +3,9 @@
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
       var map, infoWindow, pos;
+
+      //Define DOM Elements
+      var consoleDisplay = $('#console')[0];
       
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {

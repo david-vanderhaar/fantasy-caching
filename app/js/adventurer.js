@@ -35,6 +35,8 @@ function updateAdventurerPosition () {
       infoWindow.open(map);
       map.setCenter(pos);
       console.log(pos);
+      // console.log(consoleDisplay);
+      consoleDisplay.innerText = 'lat: ' + pos['lat'] + ' ' + 'lng: ' + pos['lng'];
       //Updates Adventurer Marker
       adventurerMarker.setPosition(pos);
 
