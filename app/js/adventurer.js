@@ -43,7 +43,7 @@ function updateAdventurerPosition () {
 
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
-    }, { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+    }, { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: (10 * 1000) }
 
   );
   } else {
