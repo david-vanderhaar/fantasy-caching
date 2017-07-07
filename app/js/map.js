@@ -8,7 +8,7 @@
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 38.0423268, lng: -84.49276569999999},
           zoom: 14,
-          styles: mapStyles['army']
+          styles: mapStyles['dark']
         });
         infoWindow = new google.maps.InfoWindow;
 
@@ -27,9 +27,11 @@
 
               infoWindow.setPosition(pos);
               infoWindow.setContent('Adventurer, you are here');
-              infoWindow.open(map);
+              // infoWindow.open(map);
               map.setCenter(pos);
               console.log(pos);
+              //Generates Adventurer Marker
+              generateAdventurer();
 
             }, function() {
               handleLocationError(true, infoWindow, map.getCenter());
@@ -45,6 +47,6 @@
         infoWindow.setContent(browserHasGeolocation ?
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
+        // infoWindow.open(map);
       }
 

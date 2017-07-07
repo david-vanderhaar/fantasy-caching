@@ -5,12 +5,27 @@
     <title>Geolocation</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <!-- Using Google's Materialize -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <link rel="stylesheet" href="./app/css/styles.css">
 </head>
 
-<body>
-    <div id="map"></div>
-    <button onclick="generateMonsterMarkers()">Generate Monsters</button>
+<body class="grey">
+<div id="map"></div>
+  <div class="container">
+    <div class="row">
+      <div class="controls">
+        <div class="col s6">
+          <a class="waves-effect waves-light btn" onclick="updateAdventurerPosition()">Update Position</a>        
+        </div>
+        <div class="col s6">
+          <a class="waves-effect waves-light btn red" onclick="generateMonsterMarkers()">Generate Monsters</a>
+          <a class="waves-effect waves-light btn red" onclick="clearMonsters()">Clear Monsters</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <!-- Enable Marker Clustering -->
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
@@ -21,5 +36,7 @@
 <script src="./app/js/monsters.js"></script>
 <script src="./app/js/map-styles.js"></script>
 <script src="./app/js/map.js"></script>
+<script src="./app/js/adventurer.js"></script>
+
 
 </html>
