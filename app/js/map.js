@@ -3,6 +3,7 @@
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
       var map, infoWindow, pos;
+      var timeoutVal = 10 * 1000 * 1000;
 
       //Define DOM Elements
       var consoleDisplay = $('#console')[0];

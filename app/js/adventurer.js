@@ -24,7 +24,8 @@ function generateAdventurer () {
 function updateAdventurerPosition () {
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
+    
+    navigator.geolocation.watchPosition(function(position) {
       pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
@@ -42,7 +43,9 @@ function updateAdventurerPosition () {
 
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
-    });
+    }, { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+
+  );
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
