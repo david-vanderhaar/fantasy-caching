@@ -15,12 +15,20 @@ var monsterNumber = 20;
 //  'W': -84.660415
 // }
 
-//40502's Bounding Box
+// //40502's Bounding Box
+// var monsterBox = {
+//   'N': 38.041314,
+//   'S': 37.990589,
+//   'E': -84.453474,
+//   'W': -84.515582
+// }
+
+//Downtown Lexington Box, 40507
 var monsterBox = {
-  'N': 38.041314,
-  'S': 37.990589,
-  'E': -84.453474,
-  'W': -84.515582
+  'N': 38.054707,
+  'S': 38.036752,
+  'E': -84.489183,
+  'W': -84.503093
 }
 
 //SVG Shape of Monster Icon
