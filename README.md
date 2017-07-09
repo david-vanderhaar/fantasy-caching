@@ -11,16 +11,16 @@ It will allow players to go on a virtual/physical adventure around Lexington, KY
 
 Users can:
 
-Log in
-Create Character
-Save Session
-Discover Treasure around the city
-Collect Treasure around the city
-Leave items, notes around the city for other users to discover
-Discover Monsters
-Enter into Combat with Monsters
-Interact with NPCs
-Buy and Sell treasure from NPCs
+* Log in
+* Create Character
+* Save Session
+* Discover Treasure around the city
+* Collect Treasure around the city
+* Leave items, notes around the city for other users to discover
+* Discover Monsters
+* Enter into Combat with Monsters
+* Interact with NPCs
+* Buy and Sell treasure from NPCs
 
 
 ### Why am I developing fantasy-caching?

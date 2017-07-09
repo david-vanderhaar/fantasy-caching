@@ -53,3 +53,10 @@
         // infoWindow.open(map);
       }
 
+      function setMapCenterToAdventurer () {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Adventurer position found');
+        infoWindow.open(map);
+        map.setCenter(pos);
+      }
+
