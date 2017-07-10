@@ -10,31 +10,32 @@ var monsterMarkerCluster = null;
 //Number of Monsters Generated
 var monsterNumber = 20;
 
+//Selected monster box
+var selectedMonsterBoundingBox = 'ChevyChase';
+
 //Monster Roaming Boxes
+var monsterBox = [];
 
-// // Lexington's Bounding Box
-// var monsterBox = {
-//  'N': 38.211404,
-//  'S': 37.845256,
-//  'E': -84.282715,
-//  'W': -84.660415
-// }
+monsterBox['Lexington'] = {
+ 'N': 38.211404,
+ 'S': 37.845256,
+ 'E': -84.282715,
+ 'W': -84.660415
+};
 
-//40502's Bounding Box
-var monsterBox = {
+monsterBox['LexingtonDowntown'] = {
+  'N': 38.054707,
+  'S': 38.036752,
+  'E': -84.489183,
+  'W': -84.503093
+};
+
+monsterBox['ChevyChase'] = {
   'N': 38.041314,
   'S': 37.990589,
   'E': -84.453474,
   'W': -84.515582
-}
-
-// //Downtown Lexington Box, 40507
-// var monsterBox = {
-//   'N': 38.054707,
-//   'S': 38.036752,
-//   'E': -84.489183,
-//   'W': -84.503093
-// }
+};
 
 //SVG Shape of Monster Icon
 var monsterSymbol = {
@@ -60,7 +61,7 @@ function generateMonsterMarkers () {
 
   //Create Monsters here
   for (var i = monsterLength; i < monsterLength + monsterNumber; i++) {
-    monsters.push(new monster({'lat': getRndFloat(monsterBox['S'], monsterBox['N']), 'lng': getRndFloat(monsterBox['E'], monsterBox['W']) }));
+    monsters.push(new monster({'lat': getRndFloat(monsterBox[selectedMonsterBoundingBox]['S'], monsterBox[selectedMonsterBoundingBox]['N']), 'lng': getRndFloat(monsterBox[selectedMonsterBoundingBox]['E'], monsterBox[selectedMonsterBoundingBox]['W']) }));
   }
   // Add Monster Markers
     for (var i = monsterMarkerLength; i < monsterMarkerLength + monsterNumber; i ++){
@@ -78,7 +79,7 @@ function generateMonsterMarkers () {
           strokeColor: '#0000',
           strokeOpacity: 0.8,
           strokeWeight: 2,
-          fillColor: '#FF0000',
+          fillColor: 'red',
           fillOpacity: 0.35,
           map: map,
           center: monsters[i].monsterPos,
@@ -139,20 +140,6 @@ function checkForAdventurer () {
       if (monsterEncounterRangeMarkers[i].getBounds().contains(pos)) {
         console.log('fight!');
       }
-    }
-  }
-}
-
-//Adventurer Checks for Monster
-//May later change this to checking for interactable
-function checkForMonster () {
-  if (monsters != [] && adventurerEncounterRangeMarker != null) { 
-    var bounds = adventurerEncounterRangeMarker.getBounds();
-    for (var i in monsters) {
-      if (bounds.contains(monsters[i].monsterPos)) {
-        console.log('fight!');
-        consoleDisplay.innerText = 'Fight!';
-       } 
     }
   }
 }

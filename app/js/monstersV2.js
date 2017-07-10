@@ -1,0 +1,1 @@
+var Monster = new Interactable;

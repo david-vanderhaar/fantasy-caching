@@ -102,7 +102,7 @@ function successAdventurerWatch(position) {
           strokeColor: '#0000',
           strokeOpacity: 0.8,
           strokeWeight: 2,
-          fillColor: '#FF0000',
+          fillColor: 'blue',
           fillOpacity: 0.35,
           map: map,
           center: pos,
@@ -110,4 +110,18 @@ function successAdventurerWatch(position) {
         });
     }
   }
+
+//Adventurer Checks for Monster
+//May later change this to checking for interactable
+function checkForMonster () {
+  if (Monster.entitys != [] && adventurerEncounterRangeMarker != null) { 
+    var bounds = adventurerEncounterRangeMarker.getBounds();
+    for (var i in Monster.entitys) {
+      if (bounds.contains(Monster.entitys[i].interactablePos)) {
+        console.log('fight!');
+        consoleDisplay.innerText = 'Fight!';
+       } 
+    }
+  }
+}
 
