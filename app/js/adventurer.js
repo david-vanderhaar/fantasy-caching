@@ -22,7 +22,7 @@ var adventurerSymbol = {
 
 //Build the Adventurer encounter radius here
 //This circle is the graphical representation of the range within whci adventurer will encounter monsters etc.
-var adventurerEncounterRange = null;
+var adventurerEncounterRangeMarker = null;
 
 function generateAdventurer () {
   adventurerMarker = new google.maps.Marker({
@@ -32,18 +32,9 @@ function generateAdventurer () {
           title: 'Adventurer, you are here'
         });
 
-  //Build the Adventurer encounter radius here
-  //This circle is the graphical representation of the range within whci adventurer will encounter monsters etc.
-  adventurerEncounterRange = new google.maps.Circle({
-      strokeColor: '#0000',
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillColor: '#FF0000',
-      fillOpacity: 0.35,
-      map: map,
-      center: pos,
-      radius: 10
-    });
+  showHideEncounterRangeMarker();
+
+  console.log(adventurerEncounterRangeMarker);
 }
 
 function updateAdventurerPosition () {
@@ -80,22 +71,39 @@ function successAdventurerWatch(position) {
       };
 
       //Update encounter range to adventurer
-      adventurerEncounterRange = new google.maps.Circle({
-      strokeColor: '#0000',
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillColor: '#FF0000',
-      fillOpacity: 0.35,
-      map: map,
-      center: pos,
-      radius: 10
-      });
+      if (adventurerEncounterRangeMarker != null) {
+        adventurerEncounterRangeMarker.setCenter(pos);
+      }
+
       console.log(pos);
-      console.log(watchId);
-      // console.log(consoleDisplay);
+
+
       consoleDisplay.innerText = 'lat: ' + pos['lat'] + ' ' + 'lng: ' + pos['lng'];
+      
       //Updates Adventurer Marker
       adventurerMarker.setPosition(pos);
 
-
   }
+
+  function showHideEncounterRangeMarker () {
+    //First hide and clear old marker
+    if (adventurerEncounterRangeMarker != null) {
+      adventurerEncounterRangeMarker.setMap(null);
+      adventurerEncounterRangeMarker = null;
+    } else {
+
+      //Build the Adventurer encounter radius here
+      //This circle is the graphical representation of the range within whci adventurer will encounter monsters etc.
+      adventurerEncounterRangeMarker = new google.maps.Circle({
+          strokeColor: '#0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35,
+          map: map,
+          center: pos,
+          radius: 10
+        });
+    }
+  }
+
