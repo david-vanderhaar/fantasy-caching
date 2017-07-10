@@ -83,6 +83,10 @@ function successAdventurerWatch(position) {
       //Updates Adventurer Marker
       adventurerMarker.setPosition(pos);
 
+      //Monsters check for adventurer
+      // checkForAdventurer();
+      //Adventurer checks for monsters
+      checkForMonster();
   }
 
   function showHideEncounterRangeMarker () {
@@ -102,7 +106,7 @@ function successAdventurerWatch(position) {
           fillOpacity: 0.35,
           map: map,
           center: pos,
-          radius: 10
+          radius: 400
         });
     }
   }

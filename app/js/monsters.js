@@ -1,5 +1,10 @@
 var monsters = [];
 var monsterMarkers = [];
+
+//Build the Monster encounter radius here
+//This circle is the graphical representation of the range within which monster will encounter adventurer
+var monsterEncounterRangeMarkers = [];
+
 var monsterMarkerCluster = null;
 
 //Number of Monsters Generated
@@ -15,21 +20,21 @@ var monsterNumber = 20;
 //  'W': -84.660415
 // }
 
-// //40502's Bounding Box
-// var monsterBox = {
-//   'N': 38.041314,
-//   'S': 37.990589,
-//   'E': -84.453474,
-//   'W': -84.515582
-// }
-
-//Downtown Lexington Box, 40507
+//40502's Bounding Box
 var monsterBox = {
-  'N': 38.054707,
-  'S': 38.036752,
-  'E': -84.489183,
-  'W': -84.503093
+  'N': 38.041314,
+  'S': 37.990589,
+  'E': -84.453474,
+  'W': -84.515582
 }
+
+// //Downtown Lexington Box, 40507
+// var monsterBox = {
+//   'N': 38.054707,
+//   'S': 38.036752,
+//   'E': -84.489183,
+//   'W': -84.503093
+// }
 
 //SVG Shape of Monster Icon
 var monsterSymbol = {
@@ -42,8 +47,8 @@ var monsterSymbol = {
         };
 
 //Monster Constructor Object
-var monster = function(pos) {
-  this.pos = pos;
+var monster = function(monsterPos) {
+  this.monsterPos = monsterPos;
 }
 
 function generateMonsterMarkers () {
@@ -51,6 +56,7 @@ function generateMonsterMarkers () {
   // Initialize length of monster and monsterMarker arrays
   var monsterLength = monsters.length;
   var monsterMarkerLength = monsterMarkers.length;
+  var monsterEncounterRangeMarkersLength = monsterEncounterRangeMarkers.length;
 
   //Create Monsters here
   for (var i = monsterLength; i < monsterLength + monsterNumber; i++) {
@@ -59,11 +65,25 @@ function generateMonsterMarkers () {
   // Add Monster Markers
     for (var i = monsterMarkerLength; i < monsterMarkerLength + monsterNumber; i ++){
         monsterMarkers.push(new google.maps.Marker({
-        position: monsters[i].pos,
+        position: monsters[i].monsterPos,
         map: map,
         icon: monsterSymbol,
         title: 'A monster lurks here'
       }));
+    }
+
+    // Add Monster Encounter Range Markers
+    for (var i = monsterEncounterRangeMarkersLength; i < monsterEncounterRangeMarkersLength + monsterNumber; i ++){
+        monsterEncounterRangeMarkers.push(new google.maps.Circle({
+          strokeColor: '#0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35,
+          map: map,
+          center: monsters[i].monsterPos,
+          radius: 30
+        }));
     }
 
     // console.log(monsterMarkers); 
@@ -97,14 +117,44 @@ function clearMonsters() {
   for (var i = 0; i < monsterMarkers.length; i++) {
     monsterMarkers[i].setMap(null);
     monsterMarkers[i] = null;
+
+    monsterEncounterRangeMarkers[i].setMap(null);
+    monsterEncounterRangeMarkers[i] = null;
   }
 
+  //Clear Encounter markers array
+  monsterEncounterRangeMarkers = [];
 
   //Clear Monster markers array
   monsterMarkers = [];
 
   //Clear the Monsters Array
   monsters = [];
+}
+
+//Monster Checks for Adventurer
+function checkForAdventurer () {
+  if (monsters != []) { 
+    for (var i in monsters) {
+      if (monsterEncounterRangeMarkers[i].getBounds().contains(pos)) {
+        console.log('fight!');
+      }
+    }
+  }
+}
+
+//Adventurer Checks for Monster
+//May later change this to checking for interactable
+function checkForMonster () {
+  if (monsters != [] && adventurerEncounterRangeMarker != null) { 
+    var bounds = adventurerEncounterRangeMarker.getBounds();
+    for (var i in monsters) {
+      if (bounds.contains(monsters[i].monsterPos)) {
+        console.log('fight!');
+        consoleDisplay.innerText = 'Fight!';
+       } 
+    }
+  }
 }
 
 //Utility Functions
