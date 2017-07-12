@@ -25,9 +25,6 @@
           <a class="waves-effect waves-light btn blue darken-1" onclick="showHideEncounterRangeMarker()">Show/Hide Encounter Range</a>        
         </div>
         <div class="col s6">
-         <!--  <a class="waves-effect waves-light btn red" onclick="generateMonsterMarkers()">Generate Monsters</a>
-          <a class="waves-effect waves-light btn red" onclick="clearMonsters()">Clear Monsters</a> -->
-
           <a class="waves-effect waves-light btn red" onclick="Monster.generateMarkers()">Generate Monsters</a>
           <a class="waves-effect waves-light btn red" onclick="Monster.clearMarkers()">Clear Monsters</a>
         </div>
@@ -44,6 +41,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhWgHy0QFctBl4j-SJlMDMEOy0wr--HE4&callback=initMap"
     async defer>
 </script>
+<script src="./app/js/map-icons.js"></script>
 <script src="./app/js/interactables.js"></script>
 <script src="./app/js/monstersV2.js"></script>
 <script src="./app/js/map-styles.js"></script>

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"en",
+				"entitys"
+			],
+			[
 				"boun",
 				"boundingBoxToLatLng"
 			],
@@ -22,10 +26,6 @@
 			[
 				"monster",
 				"monsterEncounterRangeMarker"
-			],
-			[
-				"en",
-				"adventurerEncounterRangeMarker"
 			],
 			[
 				"adv",
@@ -477,7 +477,7 @@
 			"file": "app/js/interactables.js",
 			"settings":
 			{
-				"buffer_size": 6487,
+				"buffer_size": 7256,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -486,7 +486,7 @@
 			"file": "app/js/monstersV2.js",
 			"settings":
 			{
-				"buffer_size": 31,
+				"buffer_size": 1962,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -495,7 +495,7 @@
 			"file": "app/js/adventurer.js",
 			"settings":
 			{
-				"buffer_size": 5268,
+				"buffer_size": 5294,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -766,6 +766,7 @@
 	],
 	"file_history":
 	[
+		"/home/dvanderhaar/Downloads/nested-hexagons.svg",
 		"/home/dvanderhaar/.bashrc",
 		"/home/dvanderhaar/.gitconfig",
 		"/home/dvanderhaar/personal-web/fantasy-caching/app/js/map-styles.js",
@@ -892,8 +893,7 @@
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_1.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_8.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_4.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_5.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_4.md"
 	],
 	"find":
 	{
@@ -1005,6 +1005,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"monster",
 			"interactable ",
 			"interactableSymbol",
 			"interactableBox",
@@ -1131,8 +1132,7 @@
 			"byebug",
 			"refund_free_bookings",
 			"deduct_free_bookings",
-			"deduct_fare",
-			"bookings"
+			"deduct_fare"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1176,7 +1176,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -1236,7 +1236,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1245,15 +1245,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6487,
+						"buffer_size": 7256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2389,
-								2389
+								1087,
+								1087
 							]
 						],
 						"settings":
@@ -1264,7 +1264,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1050.0,
+						"translation.y": 600.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1276,15 +1276,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31,
+						"buffer_size": 1962,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								31,
-								31
+								119,
+								119
 							]
 						],
 						"settings":
@@ -1305,15 +1305,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5268,
+						"buffer_size": 5294,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4719,
-								4719
+								2217,
+								2217
 							]
 						],
 						"settings":
@@ -1324,10 +1324,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2100.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1374,8 +1374,8 @@
 						"selection":
 						[
 							[
-								1764,
-								1764
+								618,
+								170
 							]
 						],
 						"settings":
@@ -1386,10 +1386,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 525.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1442,13 +1442,14 @@
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
 							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -2029,7 +2030,7 @@
 		[
 			[
 				"",
-				"~/bootcamp-s17/jekyll/example-blog/jekyll-tutorial.sublime-project"
+				"~/bootcamp-s17/laravel/time-tracks-V2/time-tracks-V2.sublime-project"
 			]
 		],
 		"width": 380.0
