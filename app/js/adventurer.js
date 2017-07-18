@@ -78,6 +78,8 @@ function successAdventurerWatch(position) {
       // checkForAdventurer();
       //Adventurer checks for monsters
       checkForMonster();
+      checkForTreasure();
+      // checkForInteractable();
   }
 
   function showHideEncounterRangeMarker () {
@@ -110,9 +112,32 @@ function checkForMonster () {
     for (var i in Monster.entitys) {
       if (bounds.contains(Monster.entitys[i].interactablePos)) {
         console.log('fight!');
+        console.log('You have encountered a monster that has '
+          + Monster.entitys[i].stats['health']
+          + ' points of health, '
+          + Monster.entitys[i].stats['attack']
+          + ' points of attack, and '
+          + Monster.entitys[i].stats['defense']
+          + ' points of defense.');
         consoleDisplay.innerText = 'Fight!';
        } 
     }
   }
 }
+
+//Adventurer Checks for Treasure
+//May later change this to checking for interactable
+function checkForTreasure () {
+  if (Treasure.entitys != [] && adventurerEncounterRangeMarker != null) { 
+    var bounds = adventurerEncounterRangeMarker.getBounds();
+    for (var i in Treasure.entitys) {
+      if (bounds.contains(Treasure.entitys[i].interactablePos)) {
+        console.log('Gold!');
+        consoleDisplay.innerText = 'Treasure!';
+       } 
+    }
+  }
+}
+
+
 

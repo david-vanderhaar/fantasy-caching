@@ -12,30 +12,28 @@ var Interactable = function () {
         this.entityNumber = 20;
 
         //Selected this.entity box
-        this.selectedBoundingBox = 'LexingtonDowntown';
+        this.selectedBoundingBox = 'ChevyChase';
 
         //Interactable Roaming Boxes
-        this.boundingBox = [];
-
-        this.boundingBox['Lexington'] = {
-         'N': 38.211404,
-         'S': 37.845256,
-         'E': -84.282715,
-         'W': -84.660415
-        };
-
-        this.boundingBox['LexingtonDowntown'] = {
-          'N': 38.054707,
-          'S': 38.036752,
-          'E': -84.489183,
-          'W': -84.503093
-        };
-
-        this.boundingBox['ChevyChase'] = {
-          'N': 38.041314,
-          'S': 37.990589,
-          'E': -84.453474,
-          'W': -84.515582
+        this.boundingBox = {
+          'Lexington': {
+            'N': 38.211404,
+            'S': 37.845256,
+            'E': -84.282715,
+            'W': -84.660415
+          },
+          'LexingtonDowntown': {
+            'N': 38.054707,
+            'S': 38.036752,
+            'E': -84.489183,
+            'W': -84.503093
+          },
+          'ChevyChase': {
+            'N': 38.041314,
+            'S': 37.990589,
+            'E': -84.453474,
+            'W': -84.515582
+          }
         };
 
         //SVG Shape of Interactable Icon
@@ -70,7 +68,7 @@ var Interactable = function () {
                 position: this.entitys[i].interactablePos,
                 map: map,
                 icon: this.mapSymbol,
-                title: 'An entity lurks here'
+                title: 'You found something!'
               }));
             }
 

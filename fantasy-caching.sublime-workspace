@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"chec",
+				"checkForTreasure"
+			],
+			[
+				"inter",
+				"interactable"
+			],
+			[
+				"check",
+				"checkForInteractable"
+			],
+			[
+				"Lexing",
+				"LexingtonDowntown"
+			],
+			[
 				"en",
 				"entitys"
 			],
@@ -465,19 +481,19 @@
 			}
 		},
 		{
-			"file": "app/js/monsters.js",
+			"file": "app/js/interactables.js",
 			"settings":
 			{
-				"buffer_size": 5101,
+				"buffer_size": 5618,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/js/interactables.js",
+			"file": "app/js/treasures.js",
 			"settings":
 			{
-				"buffer_size": 7256,
+				"buffer_size": 439,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -486,7 +502,7 @@
 			"file": "app/js/monstersV2.js",
 			"settings":
 			{
-				"buffer_size": 1962,
+				"buffer_size": 345,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -495,7 +511,16 @@
 			"file": "app/js/adventurer.js",
 			"settings":
 			{
-				"buffer_size": 5294,
+				"buffer_size": 3864,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/js/map-icons.js",
+			"settings":
+			{
+				"buffer_size": 18679,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -513,7 +538,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 2518,
+				"buffer_size": 2636,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -524,14 +549,6 @@
 			{
 				"buffer_size": 429,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/dvanderhaar/bootcamp-s17/git/git_tutorial/work/hello/hello.rb",
-			"settings":
-			{
-				"buffer_size": 73,
 				"line_ending": "Unix"
 			}
 		}
@@ -766,6 +783,12 @@
 	],
 	"file_history":
 	[
+		"/home/dvanderhaar/Downloads/cash.svg",
+		"/home/dvanderhaar/Downloads/crown-coin.svg",
+		"/home/dvanderhaar/Downloads/rupee.svg",
+		"/home/dvanderhaar/personal-web/fantasy-caching/app/js/monsters.js",
+		"/home/dvanderhaar/personal-web/fantasy-caching/app/js/map-icons.js",
+		"/home/dvanderhaar/bootcamp-s17/git/git_tutorial/work/hello/hello.rb",
 		"/home/dvanderhaar/Downloads/nested-hexagons.svg",
 		"/home/dvanderhaar/.bashrc",
 		"/home/dvanderhaar/.gitconfig",
@@ -887,13 +910,7 @@
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_14.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_15.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_3.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_3_1.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_7.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_1.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_8.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_2_4.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/tutorial/chapter_3_1.md"
 	],
 	"find":
 	{
@@ -1176,7 +1193,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1205,24 +1222,113 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/js/monsters.js",
+					"file": "app/js/interactables.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5101,
+						"buffer_size": 5618,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								417,
-								417
+								2472,
+								2472
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1575.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/js/treasures.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 439,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/js/monstersV2.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/js/adventurer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3790,
+								3790
 							]
 						],
 						"settings":
@@ -1233,27 +1339,59 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 600.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/js/interactables.js",
+					"buffer": 5,
+					"file": "app/js/map-icons.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7256,
+						"buffer_size": 18679,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1087,
-								1087
+								17989,
+								17989
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true,
+							"wrap_width": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 4316.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/js/map.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								553,
+								553
 							]
 						],
 						"settings":
@@ -1271,111 +1409,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/js/monstersV2.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1962,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								119,
-								119
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/js/adventurer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5294,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2217,
-								2217
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/js/map.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2157,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1718,
-								1718
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 75.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2518,
+						"buffer_size": 2636,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								618,
-								170
+								166,
+								166
 							]
 						],
 						"settings":
@@ -1386,14 +1433,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 25.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "app/css/styles.css",
 					"semi_transient": false,
 					"settings":
@@ -1420,36 +1467,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/home/dvanderhaar/bootcamp-s17/git/git_tutorial/work/hello/hello.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 73,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								73,
-								73
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Espresso Libre.tmTheme",
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -2030,7 +2048,7 @@
 		[
 			[
 				"",
-				"~/bootcamp-s17/laravel/time-tracks-V2/time-tracks-V2.sublime-project"
+				"~/personal-web/spinny-tops/games/speed-spin/speed-spin.sublime-workspace"
 			]
 		],
 		"width": 380.0
