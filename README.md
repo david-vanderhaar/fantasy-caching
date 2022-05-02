@@ -1,3 +1,5 @@
+ARCHIVED (to keep a log of my development journey)
+
 # fantasy-caching
 
 ### What is fantasy-caching?
